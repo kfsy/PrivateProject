@@ -56,7 +56,6 @@ public class Options extends AppCompatActivity implements View.OnClickListener {
         music = MusicServices.getMusc();
         jump = false;
         havechanged = false;
-        System.out.println("test");
     }
 
     @Override

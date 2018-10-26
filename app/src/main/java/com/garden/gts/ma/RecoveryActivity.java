@@ -1,6 +1,8 @@
 package com.garden.gts.ma;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -41,25 +43,29 @@ public class RecoveryActivity extends AppCompatActivity implements View.OnClickL
         findViewById(R.id.back).setOnClickListener(this);
         start = (Button) findViewById(R.id.start);
         start.setOnClickListener(this);
-        marginTop = (int) (Utils.getWindowHeight(this) * 3.82 / 10 - 20);
+        marginTop = Utils.getWindowHeight(this) / 4;
         ImmersedStatusbarUtils.setViewMargin(start, false, 0, 0, marginTop, 0);
         musc = MusicServices.getMusc();
         musc.playBackgroundMusic(this, R.raw.alwayswithme);
-        switch (Utils.kongFuStyle){
+        switch (Utils.kongFuStyle) {
             case 1:
                 kongFu = new KongFu(120, 60, 3, this);
-            break;
+                break;
             case 2:
-                kongFu = new KongFu(0,Utils.r2Time*60,1,this);
-                r.setBackgroundResource(R.mipmap.main_pic);
+                kongFu = new KongFu(0, Utils.r2Time * 60, 1, this);
+                r.setBackgroundResource(R.mipmap.pict2);
                 break;
             case 3:
-                kongFu = new KongFu(0,Utils.r3Time*60,1,this);
-                r.setBackgroundResource(R.mipmap.main_pic);
+                kongFu = new KongFu(0, Utils.r3Time * 60, 1, this);
+                r.setBackgroundResource(R.mipmap.pict3);
+//                start.setBackgroundResource(R.drawable.button5);
+//                start.setTextColor(0xFF0E60AC);
+                start.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
                 break;
+
             case 4:
-                kongFu = new KongFu(0,Utils.r4Time*60,1,this);
-                r.setBackgroundResource(R.mipmap.main_pic);
+                kongFu = new KongFu(0, Utils.r4Time * 60, 1, this);
+                r.setBackgroundResource(R.mipmap.pict4);
                 break;
         }
         jump = false;
@@ -81,21 +87,21 @@ public class RecoveryActivity extends AppCompatActivity implements View.OnClickL
         }
     }
 
-    public void refresh(){
+    public void refresh() {
         remind.setVisibility(View.VISIBLE);
-        remindSeconds=0;
+        remindSeconds = 0;
         handler.postDelayed(runnable, 1000);
     }
 
     Runnable runnable = new Runnable() {
         @Override
         public void run() {
-            int times=Utils.waitTime/1000;
-            if(remindSeconds<times) {
-                remind.setText(times-remindSeconds+"秒后继续开始");
+            int times = Utils.waitTime / 1000;
+            if (remindSeconds < times) {
+                remind.setText(times - remindSeconds + "秒后继续开始");
                 remindSeconds++;
-                handler.postDelayed(runnable,1000);
-            }else{
+                handler.postDelayed(runnable, 1000);
+            } else {
                 remind.setVisibility(View.INVISIBLE);
                 handler.removeCallbacks(runnable);
                 kongFu.resumeThread();
@@ -106,7 +112,7 @@ public class RecoveryActivity extends AppCompatActivity implements View.OnClickL
     @Override
     protected void onRestart() {
         if (!jump) {
-            musc.resumeBackgroundMusic();
+            musc.resumeBackgroundMusic(this);
             if (kongFu != null && kongFu.isPause() && startState) {
                 refresh();
                 Log.e("onRestart", "执行唤醒");
@@ -136,7 +142,7 @@ public class RecoveryActivity extends AppCompatActivity implements View.OnClickL
         jump = true;
         musc.stopBackgroundMusic();
         kongFu.stopThread();
-        startState=false;
+        startState = false;
         startActivity(new Intent(this, MainActivity.class));
         overridePendingTransition(R.anim.anim_fenter, R.anim.anim_fexit);
         finish();

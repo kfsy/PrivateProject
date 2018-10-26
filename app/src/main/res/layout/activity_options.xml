@@ -4,27 +4,172 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.garden.gts.ma.RecoveryActivity"
-    android:background="@mipmap/main_pic"
+    android:background="@mipmap/setting"
     android:id="@+id/recoveryLayout">
 
-    <Button
-        android:layout_width="160sp"
-        android:layout_height="60sp"
-        android:text="背景音乐：开"
-        android:textSize="20sp"
-        android:textColor="@color/colorWhite"
-        android:background="@drawable/fbtn"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/soundSwitch"
-        />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_below="@+id/soundSwitch"
         android:layout_marginTop="50sp"
+        android:id="@+id/optionsLL"
         >
-        <Button
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="补1起身/俯卧时间:"
+                android:textSize="20sp"
+                android:layout_weight="6"
+                android:gravity="end"
+                android:layout_marginRight="15sp"/>
+
+            <EditText
+                android:layout_width="40sp"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="20sp"
+                android:maxLength="2"
+                android:id="@+id/editText1"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="秒"
+                android:textSize="20sp"
+                android:layout_marginLeft="15sp"
+                android:layout_weight="2.5"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="补2时间设置:"
+                android:textSize="20sp"
+                android:layout_weight="4"
+                android:gravity="end"
+                android:layout_marginRight="15sp"/>
+
+            <EditText
+                android:layout_width="40sp"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="20sp"
+                android:maxLength="2"
+                android:id="@+id/editText2"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="分钟"
+                android:textSize="20sp"
+                android:layout_marginLeft="15sp"
+                android:layout_weight="2.5"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="补3时间设置:"
+                android:textSize="20sp"
+                android:layout_weight="4"
+                android:gravity="end"
+                android:layout_marginRight="15sp"/>
+
+            <EditText
+                android:layout_width="40sp"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="20sp"
+                android:maxLength="2"
+                android:id="@+id/editText3"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="分钟"
+                android:textSize="20sp"
+                android:layout_marginLeft="15sp"
+                android:layout_weight="2.5"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="补4时间设置:"
+                android:textSize="20sp"
+                android:layout_weight="4"
+                android:gravity="end"
+                android:layout_marginRight="15sp"/>
+
+            <EditText
+                android:layout_width="40sp"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="20sp"
+                android:maxLength="2"
+                android:id="@+id/editText4"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="分钟"
+                android:textSize="20sp"
+                android:layout_marginLeft="15sp"
+                android:layout_weight="2.5"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="准备时间设置:"
+                android:textSize="20sp"
+                android:layout_weight="5"
+                android:gravity="end"
+                android:layout_marginRight="15sp"/>
+
+            <EditText
+                android:layout_width="40sp"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="20sp"
+                android:maxLength="2"
+                android:id="@+id/editText0"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="秒"
+                android:textSize="20sp"
+                android:layout_marginLeft="15sp"
+                android:layout_weight="2.5"/>
+        </LinearLayout>
+        <!--<Button
             android:layout_width="120sp"
             android:layout_height="36sp"
             android:layout_gravity="center_horizontal"
@@ -68,7 +213,7 @@
             android:textSize="16sp"
             android:layout_marginBottom="10sp"
             android:background="#CCFFFFFF"
-            android:id="@+id/waitTime"/>
+            android:id="@+id/waitTime"/>-->
     </LinearLayout>
     <Button
         android:layout_width="100sp"
@@ -80,5 +225,6 @@
         android:layout_marginBottom="40dp"
         android:background="@drawable/fbtn"
         android:layout_centerHorizontal="true"
-        android:id="@+id/back"/>
+        android:id="@+id/back"
+        android:alpha="0.75"/>
 </RelativeLayout>

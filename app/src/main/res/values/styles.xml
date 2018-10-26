@@ -16,4 +16,24 @@
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:colorBackgroundCacheHint">@null</item>
     </style>
+
+    <style name="MainButton">
+        <item name="android:layout_width">160sp</item>
+        <item name="android:layout_height">40sp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+        <item name="android:background">@drawable/button1</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:alpha">0.85</item>
+    </style>
+
+    <style name="SettingButton">
+        <item name="android:layout_width">160sp</item>
+        <item name="android:layout_height">60sp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:background">@drawable/fbtn</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:alpha">0.75</item>
+        <item name="android:textSize">20sp</item>
+    </style>
 </resources>

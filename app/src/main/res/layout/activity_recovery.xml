@@ -4,16 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.garden.gts.ma.RecoveryActivity"
-    android:background="@mipmap/recovery1"
+    android:background="@mipmap/pict1"
     android:id="@+id/recoveryLayout">
 
     <Button
         android:layout_width="160sp"
         android:layout_height="60sp"
-        android:text = "开始"
+        android:text = "开       始"
         android:textSize="20sp"
         android:textColor="@color/colorWhite"
-        android:background="@drawable/tbtn"
+        android:background="@drawable/button4"
         android:layout_centerHorizontal="true"
         android:id="@+id/start"
         />
@@ -22,13 +22,10 @@
         android:layout_height="wrap_content"
         android:text="暂停的话，直接Home放后台就好，恢复程序继续计时。想再次开始时，请返回主界面重新进入^_^"
         android:layout_below="@+id/start"
-        android:textColor="@color/colorBlue"
-        android:shadowColor="@color/colorWhite"
-        android:shadowDx="4"
-        android:shadowDy="4"
-        android:shadowRadius="1.5"
+        android:textColor="@color/colorWhite"
         android:textSize="20sp"
         android:visibility="invisible"
+        android:layout_marginTop="80sp"
         android:layout_centerHorizontal="true"
         android:id="@+id/words"
         />
@@ -46,11 +43,12 @@
         android:layout_width="160sp"
         android:layout_height="40sp"
         android:text="返回主界面"
+        android:gravity="center_horizontal"
         android:textSize="20sp"
         android:textColor="@color/colorWhite"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="40dp"
-        android:background="@drawable/fbtn"
+        android:background="@drawable/button2"
         android:layout_centerHorizontal="true"
         android:id="@+id/back"/>
 </RelativeLayout>

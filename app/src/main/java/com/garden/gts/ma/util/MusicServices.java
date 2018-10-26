@@ -35,7 +35,7 @@ public class MusicServices {
     private void initData() {
         mLeftVolume = 0.5f;
         mRightVolume = 0.5f;
-        isPaused = false;
+        isPaused = true;
 
     }
 
@@ -108,9 +108,12 @@ public class MusicServices {
     /**
      * 继续播放背景音乐
      */
-    public void resumeBackgroundMusic() {
+    public void resumeBackgroundMusic(Context cont) {
         if (!Utils.soundTurn) {
             return;
+        }
+        if(mContext==null){
+            mContext = cont;
         }
         if(mBackgroundMediaPlayer==null){
             this.playBackgroundMusic(mContext, 0);

@@ -67,7 +67,7 @@ public class Assist extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onRestart() {
         if (!jump) {
-            music.resumeBackgroundMusic();
+            music.resumeBackgroundMusic(this);
         } else {
             jump = false;
         }

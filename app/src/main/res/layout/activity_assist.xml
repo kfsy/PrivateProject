@@ -8,13 +8,8 @@
 
     <Button
         android:id="@+id/reset"
-        android:layout_width="160sp"
-        android:layout_height="60sp"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/fbtn"
         android:text="恢复初始设置"
-        android:textColor="@color/colorWhite"
-        android:textSize="20sp" />
+        style="@style/SettingButton" />
 
     <TextView
         android:id="@+id/text1"
@@ -72,5 +67,6 @@
         android:background="@drawable/fbtn"
         android:text="返  回"
         android:textColor="@color/colorWhite"
+        android:alpha="0.75"
         android:textSize="20sp" />
 </RelativeLayout>

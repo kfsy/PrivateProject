@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/main_pic"
+    tools:context="com.garden.gts.ma.Assist">
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="160sp"
+        android:layout_height="60sp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/fbtn"
+        android:text="恢复初始设置"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="320sp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text2"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:shadowColor="@color/colorWhite"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="1.5"
+        android:text="感谢菜园朋友们的陪伴。"
+        android:textColor="@color/colorBlue"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="320sp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text3"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:shadowColor="@color/colorWhite"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="1.5"
+        android:text="匆忙之中写好这个帮助修补术计时的apk,其中或有未查漏洞以及设计缺陷，欢迎菜友们及时指出，请联系QQ863231405。"
+        android:textColor="@color/colorBlue"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="320sp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/back"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10sp"
+        android:gravity="center_horizontal"
+        android:shadowColor="@color/colorWhite"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="1.5"
+        android:text="谨以此助手献给所有在路上的人们。"
+        android:textColor="@color/colorBlue"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="100sp"
+        android:layout_height="40sp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/fbtn"
+        android:text="返  回"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp" />
+</RelativeLayout>

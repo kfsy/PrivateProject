@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">冥想助手</string>
+    <string name="choose">选择关卡</string>
+    <string name="watch">查看游戏记录</string>
+    <string name="freedom">自定义关卡</string>
+    <string name="play">开始关卡</string>
+    <string name="back">返回</string>
+    <string name="enter">确定</string>
+    <string name="chooseAlbum">选择图片</string>
+</resources>

@@ -57,6 +57,7 @@ public class Options extends AppCompatActivity implements View.OnClickListener {
         jump = false;
         havechanged = false;
         System.out.println("n");
+        System.out.println(".");
     }
 
     @Override
